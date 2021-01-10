@@ -20,11 +20,7 @@ body {
 *::after {
   box-sizing: border-box;
 }
-:focus {
-  outline-style: none;
-  outline-width: 0px !important;
-  outline-color: none !important;
-}
+
 #now-here {
   color: var(--blue);
 }
@@ -586,6 +582,11 @@ address {
   fill: var(--black);
   cursor: pointer;
   background-color: var(--white);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close:hover {
+  fill: var(--blue);
 }
 
 .stud {
@@ -613,26 +614,31 @@ address {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding-left: 42px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-div {
-  margin-bottom: 10px;
-  position: relative;
-}
-.in:hover,
-.in:focus {
-  border: 1px solid var(--blue);
-}
 .form-div:hover .icons-svg,
 .form-div:focus .icons-svg {
   fill: var(--blue);
 }
+.form-div {
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.in:hover,
+.in:focus {
+  border: 1px solid var(--blue);
+  outline-style: none;
+}
+
 .icons-svg {
   position: absolute;
   left: 15px;
   top: 32px;
   width: 12px;
   height: 12px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .com {
@@ -645,6 +651,8 @@ address {
   border-radius: 4px;
   padding-left: 16px;
   padding-top: 12px;
+  outline-style: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 textarea {
   resize: none;
@@ -672,7 +680,7 @@ textarea {
   margin-right: auto;
   margin-left: auto;
   margin-top: 30px;
-  background-color: var(--blue);
+  background-color: rgba(33, 150, 243, 1);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   border: 0px;
@@ -683,6 +691,12 @@ textarea {
   font-weight: 700;
   line-height: 30px;
   letter-spacing: 0.06em;
+  outline-style: none;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.send:hover {
+  cursor: pointer;
+  background-color: rgba(24, 140, 232, 1);
 }
 .data {
   margin-right: auto;
@@ -719,15 +733,33 @@ textarea {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.03em;
-  text-align: left;
 }
-
-.form-div input[type="checkbox"] {
+.sogl-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  width: 16px;
+  height: 15px;
+  margin: 0;
+  padding-left: 15px;
+  outline-style: none;
+}
+.check-box {
+  width: 16px;
+  height: 15px;
+  background-image: url(./images/check.svg);
+  margin-right: 7px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.sogl-input:checked + .check-box {
+  background-image: url(./images/checked.svg);
 }
 
 .check {
   align-items: center;
   display: flex;
+  margin-left: 11px;
 }
 
 .subscribe {
@@ -753,6 +785,7 @@ textarea {
   width: 358px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   background-color: var(--background);
   padding: 0;

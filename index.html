@@ -361,7 +361,7 @@
 
       </address>
       <div class="right">
-        <p class=>ПРИСОЕДИНЯЙТЕСЬ</p>
+        <p >ПРИСОЕДИНЯЙТЕСЬ</p>
         <ul class="icon-footer">
           <li class="icon-card">
             <a href="" class="icon-link deb">
@@ -399,15 +399,15 @@
       </div>
       <div class="subscribe">
         <p class="sub">ПОДПИШИТЕСЬ НА РАССЫЛКУ</p>
-        <div class="lin">
+        <form class="lin">
         <input class="footer-mail" type="email" name="name" id="mail" placeholder="E-mail">
-      <a href="" class="telega-link"> <button class="telega">Подписаться</button> 
+      <div class="telega-link"> <button class="telega">Подписаться</button> 
         <svg class="icon-telega" >
           <use href="./images/symbol-defs3.svg#icon-telega-1">
           </use>
         </svg>
-        </a>
-        </div>
+      </div>
+      </form>
       </div>
     </div>
   </div>
@@ -437,15 +437,17 @@
     <use href="./images/symbol-defs3.svg#icon-mail-1">
     </use>
   </svg>
-        <label for="mail" class="form-label">Почта</label>
-        <input type="email" name="name" id="mail" class="in"/>
+        <label for="email" class="form-label">Почта</label>
+        <input type="email" name="name" id="email" class="in"/>
         </div>
 <div class="form-div">
         <label for="comment" class="form-label">Комментарий</label>
        <textarea class="com" name="name" id="comment" placeholder="Введите текст" ></textarea> 
       </div>
 <div class="form-div check ">
-        <input  type="checkbox" value="Соглашаюсь с рассылкой и принимаю Условия договора" name="name" id="check"/>
+  <form>
+        <input class="sogl-input" type="checkbox" value="Соглашаюсь с рассылкой и принимаю Условия договора" name="name" id="check"/>
+        <span class="check-box"></span>
         <label class="sogl" for="check">Соглашаюсь с рассылкой и принимаю <a href="" class="dogo"> Условия договора</a></label>
         </div>
       <button type="submit" class="send">Отправить</button>
